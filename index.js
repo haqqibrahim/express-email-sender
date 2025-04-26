@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 3000;
 
 // Middleware to parse JSON
 app.use(bodyParser.json());
-app.use(cors({ origin: ['http://localhost:5173', 'https://ami-shop.vercel.app'] }));
+app.use(cors({ origin: ['http://localhost:5173', 'https://ami-shop.vercel.app', 'https://ami-studio.netlify.app'] }));
 
 // Setup Nodemailer transporter
 const transporter = nodemailer.createTransport({
