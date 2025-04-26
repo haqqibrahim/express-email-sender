@@ -1,6 +1,8 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
+const cors = require('cors');
+
 require('dotenv').config();
 
 const app = express();
@@ -8,6 +10,7 @@ const PORT = process.env.PORT || 3000;
 
 // Middleware to parse JSON
 app.use(bodyParser.json());
+app.use(cors({ origin: ['http://localhost:5173', 'https://ami-shop.vercel.app'] }));
 
 // Setup Nodemailer transporter
 const transporter = nodemailer.createTransport({

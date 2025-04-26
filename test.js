@@ -3,7 +3,7 @@ const axios = require("axios");
 async function sendText(user_name, email, message) {
   try {
     const response = await axios.post(
-      "http://localhost:3000/send-email",
+      "https://express-email-sender.onrender.com/send-email",
       {
         name: user_name,
         email,
