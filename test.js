@@ -1,13 +1,14 @@
 const axios = require("axios");
 
-async function sendText(user_name, email, message) {
+async function sendText(user_name, email, message, subject) {
   try {
     const response = await axios.post(
-      "https://express-email-sender.onrender.com/send-email",
+      "https://express-email-sender.onrender.com/rida/send-email",
       {
         name: user_name,
         email,
         message,
+        subject
       },
       {
         headers: {
@@ -26,4 +27,4 @@ async function sendText(user_name, email, message) {
 }
 
 // Example usage
-sendText("John Doe", "john@gmail.com", "Hello, this is a test message!");
+sendText("John Doe", "john@gmail.com", "Hello, this is a test message!", "Testing the subject");

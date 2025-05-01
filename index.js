@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 3000;
 
 // Middleware to parse JSON
 app.use(bodyParser.json());
-app.use(cors({ origin: ['https://rida-black.vercel.app','http://localhost:5173', 'https://ami-shop.vercel.app', 'https://ami-shop-git-contactform-agencyits-projects.vercel.app'] }));
+app.use(cors());
 
 // Setup Nodemailer transporter
 const transporter_amishop = nodemailer.createTransport({
